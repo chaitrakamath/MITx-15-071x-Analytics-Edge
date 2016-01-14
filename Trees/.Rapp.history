@@ -1,0 +1,39 @@
+obj <- tune(svm, Species~., data = iris, #
+              ranges = list(gamma = 2^(-1:1), cost = 2^(2:4)),#
+              tunecontrol = tune.control(sampling = "fix")#
+             )
+library(caret)
+obj <- tune(svm, Species~., data = iris, #
+              ranges = list(gamma = 2^(-1:1), cost = 2^(2:4)),#
+              tunecontrol = tune.control(sampling = "fix")#
+             )
+library(e1071)
+obj <- tune(svm, Species~., data = iris, #
+              ranges = list(gamma = 2^(-1:1), cost = 2^(2:4)),#
+              tunecontrol = tune.control(sampling = "fix")#
+             )
+summary(obj)
+svmModel <- svm(Species ~ ., data = iris, kernel = 'polynomial')
+obj <- tune(svmModel, Species~., data = iris, #
+              ranges = list(gamma = 2^(-1:1), cost = 2^(2:4)),#
+              tunecontrol = tune.control(sampling = "fix")#
+             )
+obj <- tune(svmModel, #
+              ranges = list(gamma = 2^(-1:1), cost = 2^(2:4)),#
+              tunecontrol = tune.control(sampling = "fix")#
+             )
+obj <- tune(svm, Species~., data = iris, #
+              ranges = list(gamma = 2^(-1:1), cost = 2^(2:4)),#
+              tunecontrol = tune.control(sampling = "fix")#
+             )
+obj <- tune(svm, Species~., data = iris, #
+              ranges = list(gamma = 2^(-1:1), cost = 2^(2:4)),#
+              tunecontrol = tune.control(sampling = "fix"), kernel = 'polynomial'#
+             )
+summary(obj)
+names(obj)
+obj$best.model
+obj <- tune(svm, Species~., data = iris, #
+              ranges = list(gamma = 2^(-50:20), cost = 2^(2:50)),#
+              tunecontrol = tune.control(sampling = "cross"), kernel = 'polynomial'#
+             )
